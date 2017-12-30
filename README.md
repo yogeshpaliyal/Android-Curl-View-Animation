@@ -1,5 +1,7 @@
 # Android Curl View Animation
 
+[![](https://jitpack.io/v/yogeshpaliyal/Android-Curl-View-Animation.svg)](https://jitpack.io/#yogeshpaliyal/Android-Curl-View-Animation)
+
 **Step 1.** Add the JitPack repository to your build file 
 Add it in your root build.gradle at the end of repositories:
 ```gradle
