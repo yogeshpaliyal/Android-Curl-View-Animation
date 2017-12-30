@@ -46,7 +46,7 @@ class CurlActivity(var act : Activity) {
 		 * mdplayer=MediaPlayer.create(getApplicationContext(), R.raw.bckmusic);
 		 * mdplayer.start(); mdplayer.setLooping(true);
 		 */
-        pageFlipperAudio = MediaPlayer.create(act,
+        pageFlipperAudio = MediaPlayer.create(act.baseContext,
                 R.raw.pagefilp)
 
 
