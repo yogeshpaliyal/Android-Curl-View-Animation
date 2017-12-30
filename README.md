@@ -14,7 +14,7 @@ Add it in your root build.gradle at the end of repositories:
   **Step 2.** Add the dependency
   ``` gradle
   dependencies {
-	        compile 'com.github.yogeshpaliyal:testing-123:c5eb244082'
+	        compile 'com.github.yogeshpaliyal:Android-Curl-View-Animation:-SNAPSHOT'
 	}
   ```
   
