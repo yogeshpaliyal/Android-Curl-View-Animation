@@ -4,6 +4,7 @@ import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import techpaliyal.com.curlviewanimation.CurlActivity
 
 class MainActivity : AppCompatActivity() {
     var arr= ArrayList<Int>()

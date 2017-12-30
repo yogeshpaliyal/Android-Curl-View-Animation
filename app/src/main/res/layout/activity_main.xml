@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="techpaliyal.com.curlanimation.MainActivity">
 
-    <techpaliyal.com.curlanimation.CurlView
+    <techpaliyal.com.curlviewanimation.CurlView
         android:id="@+id/curlV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
