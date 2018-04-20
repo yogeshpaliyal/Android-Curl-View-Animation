@@ -307,11 +307,16 @@ class CurlActivity(var act : Activity) {
      * CurlView size changed observer.
      */
     private inner class SizeChangedObserver : CurlView.SizeChangedObserver {
-        override fun onSizeChanged(w: Int, h: Int) {
+        override fun onSizeChanged(w: Int, h: Int,horizontal_two_page: Boolean) {
 
             if (w > h) {
-                mCurlView!!.setViewMode(CurlView.SHOW_TWO_PAGES)
-                mCurlView!!.setMargins(.0f, .0f, .0f, .0f)
+                if (horizontal_two_page) {
+                    mCurlView!!.setViewMode(CurlView.SHOW_TWO_PAGES)
+                    mCurlView!!.setMargins(.0f, .0f, .0f, .0f)
+                }else{
+                    mCurlView!!.setViewMode(CurlView.SHOW_ONE_PAGE)
+                    mCurlView!!.setMargins(.0f, .0f, .0f, .0f)
+                }
             } else {
 
                 mCurlView!!.setViewMode(CurlView.SHOW_ONE_PAGE)

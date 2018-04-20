@@ -1,6 +1,7 @@
 package techpaliyal.com.curlviewanimation;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.opengl.GLSurfaceView;
@@ -15,6 +16,8 @@ import android.view.View;
  */
 public class CurlView extends GLSurfaceView implements View.OnTouchListener,
 		CurlRenderer.Observer {
+
+	public static boolean horizontal_two_page = true;
 
 	// Curl state. We are flipping none, left or right page.
 	private static final int CURL_LEFT = 1;
@@ -84,6 +87,10 @@ public class CurlView extends GLSurfaceView implements View.OnTouchListener,
 	 */
 	public CurlView(Context ctx, AttributeSet attrs) {
 		super(ctx, attrs);
+
+		TypedArray a = ctx.obtainStyledAttributes(attrs, R.styleable.CurlView);
+		horizontal_two_page = a.getBoolean(R.styleable.CurlView_horizontal_two_page,true);
+
 		init(ctx);
 	}
 
@@ -92,6 +99,10 @@ public class CurlView extends GLSurfaceView implements View.OnTouchListener,
 	 */
 	public CurlView(Context ctx, AttributeSet attrs, int defStyle) {
 		this(ctx, attrs);
+
+		TypedArray a = ctx.obtainStyledAttributes(attrs, R.styleable.CurlView);
+		horizontal_two_page = a.getBoolean(R.styleable.CurlView_horizontal_two_page,true);
+
 	}
 
 	/**
@@ -189,7 +200,9 @@ public class CurlView extends GLSurfaceView implements View.OnTouchListener,
 		super.onSizeChanged(w, h, ow, oh);
 		requestRender();
 		if (mSizeChangedObserver != null) {
-			mSizeChangedObserver.onSizeChanged(w, h);
+
+			mSizeChangedObserver.onSizeChanged(w, h,horizontal_two_page);
+
 		}
 	}
 
@@ -791,7 +804,9 @@ public class CurlView extends GLSurfaceView implements View.OnTouchListener,
 		/**
 		 * Called once CurlView size changes.
 		 */
-		public void onSizeChanged(int width, int height);
+
+		public void onSizeChanged(int width, int height, boolean b);
+
 	}
 
 }

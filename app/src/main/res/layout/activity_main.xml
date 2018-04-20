@@ -8,6 +8,7 @@
 
     <techpaliyal.com.curlviewanimation.CurlView
         android:id="@+id/curlV"
+        app:horizontal_two_page="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
