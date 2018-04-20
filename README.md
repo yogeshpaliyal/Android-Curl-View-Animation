@@ -25,6 +25,7 @@ Add it in your root build.gradle at the end of repositories:
 <techpaliyal.com.curlviewanimation.CurlView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+	app:horizontal_two_page="false"
         android:id="@+id/curlView"/>
 ```
 **Step 4.** Create Int Array (JAVA)
