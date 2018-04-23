@@ -70,3 +70,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+**Source**
+https://github.com/harism/android_page_curl
